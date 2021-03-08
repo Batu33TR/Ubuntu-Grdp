@@ -139,7 +139,7 @@ jobs:
 
     - name: Configure Byobu
       run: |
-           byobu-enable
+           # byobu-enable
            echo "set -g default-shell /usr/bin/zsh" >> $HOME/.byobu/.tmux.conf
            echo "set -g default-command /usr/bin/zsh" >> $HOME/.byobu/.tmux.conf
 
