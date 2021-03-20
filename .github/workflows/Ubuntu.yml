@@ -55,7 +55,9 @@ jobs:
       # sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'
 
     - name: Installing Desktop Environment (wait for 5 min)
-      run: sudo apt update && sudo add-apt-repository ppa:ubuntudde-dev/stable -y && sudo apt install ubuntudde-dde -y && sudo apt install ubuntudde-dde-extras -y
+      run: |
+            sudo apt update && sudo apt install xfce4 && sudo chmod 777 /home/Batu33TR/
+             sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'
 
     # Cleanup The Actions Workspace Using Custom Composite Run Actions
     - name: Clean VM
