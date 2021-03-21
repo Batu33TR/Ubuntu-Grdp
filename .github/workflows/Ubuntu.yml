@@ -138,6 +138,10 @@ jobs:
            chmod 755 install.zsh
            ./install.zsh
            sudo chsh -s /bin/bash runner
+           sudo chmod 755 /usr/share/zsh
+           sudo chmod 755 /usr/share/zsh/*
+           sudo chmod 755 /usr/share/zsh/*/*
+           sudo chmod 755 /usr/share/zsh/*/*/*
 
     - name: Configure Byobu
       run: |
