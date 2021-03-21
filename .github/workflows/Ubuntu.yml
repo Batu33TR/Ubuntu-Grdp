@@ -145,9 +145,10 @@ jobs:
 
     - name: Configure Byobu
       run: |
+           sudo apt install byobu
            bash -c byobu-enable
-           echo 'echo "set -g default-shell /usr/bin/zsh > /home/runner/.byobu/.tmux.conf" > /home/runner/.bashrc'
-           echo 'echo "set -g default-command /usr/bin/zsh > /home/runner/.byobu/.tmux.conf" > /home/runner/.bashrc'
+           echo "set -g default-shell /usr/bin/zsh" >> $HOME/.config/byobu/.tmux.conf
+           echo "set -g default-command /usr/bin/zsh" >> $HOME/.config/byobu/.tmux.conf
 
     - name: Mount GDrive with Rclone
       run: |
