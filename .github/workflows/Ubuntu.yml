@@ -60,8 +60,8 @@ jobs:
             sudo bash -c 'echo "exec /etc/X11/Xsession /usr/bin/xfce4-session" > /etc/chrome-remote-desktop-session'
 
     # Cleanup The Actions Workspace Using Custom Composite Run Actions
-    - name: Clean VM
-      uses: rokibhasansagar/slimhub_actions@main
+    # - name: Clean VM
+    #   uses: rokibhasansagar/slimhub_actions@main
 
     - name: Install Android Building Packages
       run: curl -fsSL "https://raw.githubusercontent.com/ProjectMedusaAndroid/KernelEnvironments/ARM64/android_build_env.sh" | bash
